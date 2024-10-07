@@ -1,0 +1,6 @@
+.env
+.env.local
+.eodash
+node_modules
+public/cesiumStatic
+.vscode

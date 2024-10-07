@@ -1,0 +1,34 @@
+# .github/workflows/deploy.yml
+name: Deploy main branch
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup node env
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          check-latest: true
+      - name: Checkout
+        run: |
+          npm install
+          node scripts/cesium.js
+          npm run build -- --base /${{ github.event.repository.name }}/
+          cp .eodash/dist/index.html .eodash/dist/404.html
+          touch .eodash/dist/.nojekyll
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./.eodash/dist/
+          branch: gh-pages
+          clean-exclude: pr-preview

@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "composite": true,
+        "module": "ESNext",
+        "checkJs": true,
+        "allowJs": true,
+        "moduleResolution": "Node",
+        "target": "ESNext",
+        "allowSyntheticDefaultImports": true,
+        "outDir": "dist"
+    },
+    "include": [
+        "scripts/**/*.js",
+        "scripts/**/*.ts",
+    ]
+}

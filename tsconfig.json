@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "outDir": "dist",
+        "target": "esnext",
+        "allowJs": true,
+        "checkJs": true,
+        "skipLibCheck": true,
+        "useDefineForClassFields": true,
+        "allowSyntheticDefaultImports": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "strict": true,
+        "jsx": "preserve",
+        "sourceMap": false,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "types": [
+            "node",
+            "vuetify",
+            "vite"
+        ],
+        "paths": {
+            "@/*": [
+                "./node_modules/@eodash/eodash/core/client"
+            ],
+        },
+    },
+    "references": [
+        {
+            "path": "tsconfig.node.json"
+        }
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        ".eodash"
+    ],
+    "include": [
+        "src/**/*.js",
+        "src/**/*.ts",
+        "src/**/*.vue",
+    ]
+}
