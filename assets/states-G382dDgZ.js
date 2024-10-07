@@ -1,1 +1,0 @@
-import{s as t,r as o,ar as s}from"./index-pcEv12t-.js";const g=t(null),e=o(new Date(0).toISOString()),a=o("2014-01-11T00:00:00.000Z"),n=o(new Date().toISOString()),l=o("2014-01-11T02:00:00.000Z"),r=s({}),c=s([]),i=s([]);window.viresStore={legends:i,globeCollections:c,allowedFrom:e,allowedTo:n,from:a,to:l,settings:r};export{g as a,a as f,c as g,i as l,r as s,l as t};
