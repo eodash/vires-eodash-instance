@@ -1,1 +1,0 @@
-{"$schema":"https://schemas.stacspec.org/v1.0.0/item-spec/json-schema/item.json","id":"CH_ME_MAG_LR_3","stac_version":"1.0.0","type":"Feature","properties":{"datetime":null},"stac_extensions":[],"geometry":null,"links":[],"assets":{"data":{"href":"https://vires.services/hapi/data?dataset=CH_ME_MAG_LR_3"}}}
