@@ -3,7 +3,7 @@ import { createEodash } from "@eodash/eodash";
 export default createEodash({
     id: "vires",
     //@ts-expect-error served from public folder
-    stacEndpoint:new URL("../assets/stac/catalog.json",import.meta.url).href,
+    stacEndpoint:new URL("/stac/catalog.json",import.meta.url).href,
     brand: {
         name: "Vires",
         theme: {
