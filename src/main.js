@@ -1,10 +1,9 @@
 import { createEodash } from "@eodash/eodash";
 
-
 export default createEodash({
     id: "vires",
     //@ts-expect-error served from public folder
-    stacEndpoint: "/stac/catalog.json",
+    stacEndpoint:new URL("../assets/stac/catalog.json",import.meta.url).href,
     brand: {
         name: "Vires",
         theme: {
@@ -15,7 +14,7 @@ export default createEodash({
                 secondary: "#004170",
             }
         },
-        noLayout:true,
+        noLayout: true,
         footerText: "VirEs for Swarm"
     },
     template: {
@@ -29,8 +28,8 @@ export default createEodash({
         },
         widgets: [
             {
-                id: "itemfilter",
-                title: "Item Filter",
+                id: "datasets",
+                title: "Datasets",
                 layout: { x: 0, y: 0, w: 3, h: 5 },
                 type: "internal",
                 widget: {
